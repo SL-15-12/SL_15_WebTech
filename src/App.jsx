@@ -3,45 +3,36 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Student from './components/Student.jsx';
+import InfoBox from './components/InfoBox.jsx';
+import Header from "./components/Header.jsx";
+import Technology from "./components/Technology.jsx";
+import Footer from "./components/Footer.jsx";
+import Navigation from "./components/Navigation.jsx";
+
+
 
 function App() {
+ return(
+ <>
+      <Header />
 
-  const app = {
-    name: "WebTech",
-    version: "1.0",
-    author: "Sebastian Lipiński",
-    technologiesCount: 3
-  };
-  const student = {
-    name: "Sebastian",
-    surname: "Lipiński",
-    className: "4P",
-    specialization: "technik programista"
-  };
-  const course = {
-    name: "Sebastian",
-    teacher: "Rafał Taraszka",
-    hours: "4",
-    completed: "3"
-  };
+      <Navigation/>
 
-  return (
-    <>
-      <h1>{app.name}</h1>
+      <main>
 
-      <p>Wersja: {app.version}</p>
+        <Student />
 
-      <p>Autor: {app.author}</p>
+        <InfoBox />
 
-      <p>
-        Liczba technologii: {app.technologiesCount}
-      </p>
-      <p>{student.name} - {student.surname} - {student.className} - {student.specialization}</p>
-      <section>
-        <p>{course.name} - {course.teacher} - {course.hours} - {course.completed}</p>
-      </section>
+        <Technology />
+
+      </main>
+
+      <Footer />
     </>
-  )
+ );
+  
 }
 
 export default App
