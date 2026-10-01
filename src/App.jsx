@@ -9,6 +9,7 @@ import Header from "./components/Header.jsx";
 import Technology from "./components/Technology.jsx";
 import Footer from "./components/Footer.jsx";
 import Navigation from "./components/Navigation.jsx";
+import Books from"./components/Books.jsx";
 
 
 
@@ -39,6 +40,12 @@ const technologies = [
       category: "Baza danych",
       hours: 20
     }
+  ];
+
+  const books = [
+  { id: 1, title: "Wiedźmin", author: "Andrzej Sapkowski" },
+  { id: 2, title: "Hobbit", author: "J.R.R. Tolkien" },
+  { id: 3, title: "Lalka", author: "Bolesław Prus" }
   ];
 
 
@@ -74,6 +81,16 @@ const technologies = [
           })
         }
       <hr/>
+      {
+        books.map((book)=>{
+          return (
+            <Books
+            book={book.title}
+            author={book.author}
+            />
+          )
+        })
+      }
       <Footer />
     </>
  );
