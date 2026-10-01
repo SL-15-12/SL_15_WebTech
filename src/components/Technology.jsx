@@ -1,9 +1,9 @@
-function Technology() {
+function Technology({ name, category, hours }) {
   return (
     <section>
-      <h2>React</h2>
-      <p>Biblioteka frontendowa</p>
-      <p>Liczba godzin: 30</p>
+      <h2>{name}</h2>
+      <p>Kategoria: {category}</p>
+      <p>Liczba godzin: {hours}</p>
     </section>
   );
 }

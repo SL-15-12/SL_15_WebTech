@@ -12,23 +12,68 @@ import Navigation from "./components/Navigation.jsx";
 
 
 
+
 function App() {
+  const students = [
+  { id: 1, name: "Anna", className: "4P" , age: 18, specialization:"Programista"},
+  { id: 2, name: "Jan", className: "4P" , age: 17 , specialization:"Programista"},
+  { id: 3, name: "Adam", className: "4P" , age: 20 , specialization:"Programista"},
+  { id: 4, name:"Tomek", className: "4P" , age: 16, specialization:"Programista"}
+];
+const technologies = [
+    {
+      id: 1,
+      name: "React",
+      category: "Frontend",
+      hours: 30
+    },
+    {
+      id: 2,
+      name: "Node.js",
+      category: "Backend",
+      hours: 40
+    },
+    {
+      id: 3,
+      name: "MySQL",
+      category: "Baza danych",
+      hours: 20
+    }
+  ];
+
+
  return(
  <>
+
+
       <Header />
 
-      <Navigation/>
+      {
+        technologies.map((technology)=>{
+          return(
+            <Technology
+            name={technology.name}
+            hours={technology.hours}
+            category={technology.category}
+            />
+          )
+        })
+      }
 
-      <main>
-
-        <Student />
-
-        <InfoBox />
-
-        <Technology />
-
-      </main>
-
+      <hr/>
+      {
+        students.map((student)=>{
+          return (
+            <Student
+            key={student.id}
+            name={student.name}
+            className={student.className}
+            age={student.age}
+            specialization={student.specialization}
+            />)
+          })
+        }
+      <hr/>
       <Footer />
     </>
  );

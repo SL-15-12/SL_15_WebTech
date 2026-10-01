@@ -1,12 +1,12 @@
-function Student()
+function Student({key,name,age,className,specialization})
 {
   return(
-    <div>
-      <h1>Zadanie 1</h1>
-      <p>Sebastian Lipiński</p>
-      <p>4P</p>
-      <p>Programista</p>
-    </div>
+<section className="student">
+  <p>Imie: {name}</p>
+  <p>Wiek: {age}</p>
+  <p>Klasa: {className}</p>
+  <p>Specjalizacja: {specialization}</p>
+</section>
   )
 }
 
