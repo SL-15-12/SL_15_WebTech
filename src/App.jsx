@@ -39,7 +39,20 @@ const technologies = [
       name: "MySQL",
       category: "Baza danych",
       hours: 20
+    },
+    {
+    id: 4,
+    name: "Express",
+    category: "Backend",
+    hours: 25
+    },
+    {
+    id: 5,
+    name: "MongoDB",
+    category: "Baza danych",
+    hours: 20
     }
+
   ];
 
   const books = [
