@@ -10,8 +10,7 @@ import Technology from "./components/Technology.jsx";
 import Footer from "./components/Footer.jsx";
 import Navigation from "./components/Navigation.jsx";
 import Books from"./components/Books.jsx";
-
-
+import Product  from './components/Product.jsx';
 
 
 function App() {
@@ -61,6 +60,10 @@ const technologies = [
   { id: 3, title: "Lalka", author: "Bolesław Prus" }
   ];
 
+    const produkty =[
+      {name: "laptop", price: 3500},
+      {name: "monitor", price: 650}
+     ];
 
  return(
  <>
@@ -104,6 +107,20 @@ const technologies = [
           )
         })
       }
+      {
+        produkty.map((produkt)=>{
+          return(
+            <Product
+            name={produkt.name}
+            price={produkt.price}
+            />
+          )
+        })
+        
+      }
+      
+      
+      
       <Footer />
     </>
  );
