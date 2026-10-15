@@ -4,6 +4,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Technology from "./components/Technology.jsx";
+import Counter from './components/Counter.jsx';
+import Status from './components/Status.jsx';
 /** 
 import Student from './components/Student.jsx';
 import InfoBox from './components/InfoBox.jsx';
@@ -91,6 +93,7 @@ const technologies = [
 
     //Zadanie 15.10.2026
    <>
+   <Status/>
    {
     technologies.map((x)=>{
       return(<Technology
@@ -102,6 +105,7 @@ const technologies = [
       />)
     })
    }
+   <Counter/>
    
    </>
 
